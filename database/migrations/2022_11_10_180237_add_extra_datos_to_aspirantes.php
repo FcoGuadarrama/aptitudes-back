@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('aspirantes', function (Blueprint $table) {
-            $table->string('numero_control')->after('results');
-            $table->string('carrera')->after('numero_control');
-            $table->string('semestre')->after('carrera');
+            $table->string('control_number')->after('results');
+            $table->string('career')->after('control_number');
+            $table->string('semester')->after('career');
         });
     }
 

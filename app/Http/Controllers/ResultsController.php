@@ -15,8 +15,6 @@ class ResultsController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $results = [];
-
         $areas = [
             'cientifica' => [1, 21, 36, 38, 51, 70, 78, 93, 96, 107],
             'coordinacion_visiomotriz' => [2, 13, 35, 44, 56, 65, 74, 88, 101, 114],
@@ -88,13 +86,21 @@ class ResultsController extends Controller
             $espacial
         ];
 
-        Aspirante::create([
+        $aspirante = Aspirante::create([
             'name' => $request->person['name'] . " " . $request->person['lastname'],
             'email' => $request->person['email'],
             'age' => $request->person['age'],
+            'control_number' => $request->person['control_number'],
+            'career' => $request->person['career'],
+            'semester' => $request->person['semester'],
             'results' => json_encode($results),
         ]);
 
-        return response()->json($results, 200);
+        $array = [
+          'aspirante' => $aspirante,
+          'results' => $results
+        ];
+
+        return response()->json($array, 200);
     }
 }

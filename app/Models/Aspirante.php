@@ -13,6 +13,9 @@ class Aspirante extends Model
         'name',
         'email',
         'age',
-        'results'
+        'results',
+        'control_number',
+        'career',
+        'semester',
     ];
 }

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\AspirantesExport;
 use App\Models\Aspirante;
 use App\Http\Requests\StoreAspiranteRequest;
 use App\Http\Requests\UpdateAspiranteRequest;
+use PDF;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AspiranteController extends Controller
 {
@@ -82,5 +85,19 @@ class AspiranteController extends Controller
     public function destroy(Aspirante $aspirante)
     {
         //
+    }
+
+    public function export(){
+        return Excel::download(new AspirantesExport, 'aspirantes.xlsx');
+    }
+
+    public function generatePDF($id) {
+       $results_aspirante = [
+           'aspirante' => Aspirante::where('id', $id)->first(),
+       ];
+
+       $pdf = PDF::loadView('results', $results_aspirante);
+
+       return $pdf->download('resultados.pdf');
     }
 }

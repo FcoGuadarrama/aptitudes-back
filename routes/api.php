@@ -18,6 +18,8 @@ Route::group(['middleware' => 'api', 'cors'], function ($router) {
     Route::post('login', 'AuthController@login');
     Route::post('calculate', [ResultsController::class, '__invoke']);
     Route::get('aspirante', 'AspiranteController@index');
+    Route::get('exportar', 'AspiranteController@export');
+    Route::get('resultado-aspirante/{id}', 'AspiranteController@generatePDF');
 });
 
 

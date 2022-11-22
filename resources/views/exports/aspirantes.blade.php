@@ -1,4 +1,25 @@
+<style>
 
+    @page {
+        margin: 0;
+    }
+
+    body {
+        margin: 3.5cm 1cm 1cm;
+    }
+
+    #watermark {
+        position: fixed;
+        bottom:   0;
+        left:     0;
+        width:    21.8cm;
+        height:   28cm;
+        z-index:  -1000;
+    }
+</style>
+<div id="watermark">
+    <img src="{{ 'public/images/logo.jpeg' }}" height="100%" width="100%"  alt="logo"/>
+</div>
 <table class="table">
     <thead>
     <tr>

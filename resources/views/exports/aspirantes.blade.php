@@ -9,7 +9,18 @@
         <th>Numero de control</th>
         <th>Carrera</th>
         <th>Semestre</th>
-        <th>Resultados</th>
+        <th>Abstracta</th>
+        <th>Coord. Vision</th>
+        <th>Numérica</th>
+        <th>Verbal</th>
+        <th>Persuasiva</th>
+        <th>Mecánica</th>
+        <th>Social</th>
+        <th>Directiva</th>
+        <th>Organización</th>
+        <th>Musical</th>
+        <th>Artes plasticas</th>
+        <th>Espacial</th>
         <th>Fecha</th>
     </tr>
     </thead>
@@ -21,9 +32,12 @@
             <td>{{ $aspirante->age }}</td>
             <td>{{ $aspirante->email }}</td>
             <td>{{ $aspirante->control_number }}</td>
-            <td>{{ $aspirante->career }}</td>
+            <td>{{ $aspirante->current_career }}</td>
             <td>{{ $aspirante->semester }}</td>
-            <td>{{ $aspirante->results }}</td>
+            
+            @foreach(json_decode($aspirante->results) as $result)
+                <td>{{ $result }}</td>
+            @endforeach
             <td>{{ \Carbon\Carbon::parse($aspirante->created_at)->format('d-m-y') }}</td>
         </tr>
     @endforeach

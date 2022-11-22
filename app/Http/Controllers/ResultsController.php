@@ -91,7 +91,7 @@ class ResultsController extends Controller
             'email' => $request->person['email'],
             'age' => $request->person['age'],
             'control_number' => $request->person['control_number'],
-            'career' => $request->person['career'],
+            
             'current_career' => $request->person['current_career'],
             'requested_career' => $request->person['requested_career'],
             'semester' => $request->person['semester'],

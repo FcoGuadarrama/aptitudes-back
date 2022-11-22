@@ -97,7 +97,7 @@ class AspiranteController extends Controller
        ];
 
        $pdf = PDF::loadView('results', $results_aspirante);
-
+       $pdf->setPaper("A4","landscape");
        return $pdf->download('resultados.pdf');
     }
 }

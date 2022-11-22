@@ -16,7 +16,7 @@
 
 <div class="container">
     <p>Hola, {{ $aspirante->name }}, de numero de control: {{ $aspirante->control_number }}, cursando el semestre
-    {{ $aspirante->semester }} de la carrera de {{ $aspirante->career }}, tu resultado es:</p>
+    {{ $aspirante->semester }} de la carrera de {{ $aspirante->current_career }}, tu resultado es:</p>
 </div>
 
 <table class="table table-bordered">
@@ -27,10 +27,10 @@
         <th>Numérica</th>
         <th>Verbal</th>
         <th>Persuasiva</th>
-        <th>Mecanica</th>
+        <th>Mecánica</th>
         <th>Social</th>
         <th>Directiva</th>
-        <th>Organizacion</th>
+        <th>Organización</th>
         <th>Musical</th>
         <th>Artes plasticas</th>
         <th>Espacial</th>

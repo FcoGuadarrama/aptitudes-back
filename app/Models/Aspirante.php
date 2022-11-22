@@ -17,7 +17,7 @@ class Aspirante extends Model
         'control_number',
         'current_career',
         'requested_career',
-        'career',
+        
         'semester',
     ];
 }

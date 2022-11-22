@@ -15,6 +15,8 @@ class Aspirante extends Model
         'age',
         'results',
         'control_number',
+        'current_career',
+        'requested_career',
         'career',
         'semester',
     ];

@@ -24,6 +24,9 @@
             <td>{{ $aspirante->career }}</td>
             <td>{{ $aspirante->semester }}</td>
             <td>{{ $aspirante->results }}</td>
+            @foreach($aspirante->results as $result)
+                <td>{{ $result }}</td>
+            @endforeach
             <td>{{ \Carbon\Carbon::parse($aspirante->created_at)->format('d-m-y') }}</td>
         </tr>
     @endforeach

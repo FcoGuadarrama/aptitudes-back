@@ -88,7 +88,7 @@ class AspiranteController extends Controller
     }
 
     public function export(){
-        return Excel::download(new AspirantesExport, 'aspirantes.xlsx');
+        return Excel::download(new AspirantesExport, 'Cambio de Carrera.xlsx');
     }
 
     public function generatePDF($id) {

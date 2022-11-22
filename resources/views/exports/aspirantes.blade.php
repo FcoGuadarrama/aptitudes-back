@@ -1,25 +1,4 @@
-<style>
 
-    @page {
-        margin: 0;
-    }
-
-    body {
-        margin: 3.5cm 1cm 1cm;
-    }
-
-    #watermark {
-        position: fixed;
-        bottom:   0;
-        left:     0;
-        width:    21.8cm;
-        height:   28cm;
-        z-index:  -1000;
-    }
-</style>
-<div id="watermark">
-    <img src="{{ 'public/images/logo.jpeg' }}" height="100%" width="100%"  alt="logo"/>
-</div>
 <table class="table">
     <thead>
     <tr>
@@ -31,7 +10,7 @@
         <th>Carrera</th>
         <th>Semestre</th>
         <th>Abstracta</th>
-        <th>Coord. Vision</th>
+        <th>Coord. Visión</th>
         <th>Numérica</th>
         <th>Verbal</th>
         <th>Persuasiva</th>
@@ -40,7 +19,7 @@
         <th>Directiva</th>
         <th>Organización</th>
         <th>Musical</th>
-        <th>Artes plasticas</th>
+        <th>Artes plásticas</th>
         <th>Espacial</th>
         <th>Fecha</th>
     </tr>

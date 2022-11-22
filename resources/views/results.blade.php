@@ -11,19 +11,21 @@
 </head>
 <body>
 
-<h1 class="text-center">HOLA, ESTO ES TU RESULTADO</h1>
+
+
 
 
 <div class="container">
-    <p>Hola, {{ $aspirante->name }}, de numero de control: {{ $aspirante->control_number }}, cursando el semestre
-    {{ $aspirante->semester }} de la carrera de {{ $aspirante->current_career }}, tu resultado es:</p>
-</div>
+    <nav><strong>Instituto Tecnológico de Puebla</strong></nav> <br>
+    <p>Hola, {{ $aspirante->name }} {{ $aspirante->lastname }}, de numero de control: {{ $aspirante->control_number }}, cursando el semestre
+    {{ $aspirante->semester }} de la carrera de {{ $aspirante->current_career }}, tu resultado es:</p> <br>
+</div> <br>
 
 <table class="table table-bordered">
     <thead>
     <tr>
         <th>Abstracta</th>
-        <th>Coord. Vision</th>
+        <th>Coord. Visión</th>
         <th>Numérica</th>
         <th>Verbal</th>
         <th>Persuasiva</th>
@@ -32,18 +34,39 @@
         <th>Directiva</th>
         <th>Organización</th>
         <th>Musical</th>
-        <th>Artes plasticas</th>
+        <th>Artes plásticas</th>
         <th>Espacial</th>
-    </tr>
+    </tr> <br>
     </thead>
-    <tbody>
+    <tbody> <br>
     <tr>
         @foreach(json_decode($aspirante->results) as $result)
             <td>{{ $result }}</td>
         @endforeach
-    </tr>
-    </tbody>
+    </tr> <br>
+    </tbody> <br>
 </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>Departamento de Desarrollo Académico</footer>
 
 </body>
 </html>
